@@ -1,15 +1,35 @@
-# API Project
+# 🌤️ Weather Dashboard API Project
 
-This is a beginner project where I am learning how to use APIs with Python and Flask.
+A simple beginner-friendly project built to learn how APIs work using Python and Flask.  
+This application fetches real-time weather data from the OpenWeather API and displays it to the user.
+---
 
-## Goals
-- Learn how APIs work
-- Practice backend development
-- Build a simple weather application
-- Learn Git and GitHub workflow
+## Features
+- Search weather by city name
+- Fetch real-time weather data from an external API
+- Display temperature and weather conditions
+- Basic backend built with Flask
+- Practice working with JSON data from APIs
 
-## Technologies
+---
+
+## Stack
 - Python
 - Flask
+- Requests library
 - OpenWeather API
-- Git/GitHub
+- Git & GitHub
+
+---
+
+## API Used
+This project uses the OpenWeather API:
+https://openweathermap.org/api
+
+---
+
+## Installation & Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
