@@ -1,5 +1,4 @@
-# 🌤️ Weather Dashboard API Project
-
+# Weather Dashboard API Project by Saloni Dhawale
 A simple beginner-friendly project built to learn how APIs work using Python and Flask.  
 This application fetches real-time weather data from the OpenWeather API and displays it to the user.
 ---
