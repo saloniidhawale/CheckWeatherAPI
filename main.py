@@ -1,24 +1,30 @@
-from flask import Flask
+from flask import Flask, render_template, request
 import requests
 
 app = Flask(__name__)
 
-API_KEY = "YOUR_API_KEY_HERE"
+API_KEY = "b2d46888125f3687d51c8d0316bd6575"
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def home():
 
-    city = "Toronto"
+    weather_data = None
 
-    url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
+    if request.method == "POST":
+        city = request.form["city"]
 
-    response = requests.get(url, timeout=5)
+        url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
 
-    print("STATUS CODE:", response.status_code)
-    print("TEXT RESPONSE:", response.text)
+        response = requests.get(url)
+        data = response.json()
 
-    return response.text
+        weather_data = {
+            "city": city,
+            "temp": data["main"]["temp"],
+            "desc": data["weather"][0]["description"]
+        }
 
+    return render_template("index.html", weather=weather_data)
 
 if __name__ == "__main__":
     app.run(debug=True)
