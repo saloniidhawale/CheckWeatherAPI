@@ -63,18 +63,12 @@ Humidity: 58%
 Wind Speed: 3.6 m/s
 ```
 
-## What I Learned
-
-- Making HTTP requests in Python
-- Working with APIs
-- Parsing JSON responses
-- Error handling
-- Using environment variables
-- Managing a project with Git and GitHub
-
-## Future Improvements
-
-- 5-day forecast support
-- Save previous searches
-- Weather history
-- Graphical user interface (GUI)
+## Learned Material
+  APIs
+    HTTP requests
+    Authentication
+    API keys
+    JSON responses
+  Software Development
+    Environment variables
+    Dependency management (requirements.txt)
