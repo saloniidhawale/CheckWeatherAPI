@@ -1,10 +1,19 @@
-import requests
-import os
-from dotenv import load_dotenv
+# When you run: python3 weather.py
+#  the program:
+#  Asks the user for a city
+#  Sends a request to OpenWeather
+#  Receives weather data
+#  Extracts useful information
+#  Prints it nicely
+#  Repeats until the user types "quit"
 
-load_dotenv()
+import requests # Allows Python to communicate with websites and APIs
+import os # Lets Python interact with your computer's environment. *Anyone viewing your GitHub can steal your key
+from dotenv import load_dotenv # Reads your .env file
 
-API_KEY = os.getenv("API_KEY")
+load_dotenv() # "Read the .env file and load its contents" Without this, Python would never know the variable exists.
+
+API_KEY = os.getenv("API_KEY") # "*"
 
 if not API_KEY:
     print("Error: API_KEY not found in .env file")
@@ -17,14 +26,14 @@ def get_weather(city):
     )
 
     try:
-        response = requests.get(url, timeout=5)
-        data = response.json()
+        response = requests.get(url, timeout=5) # This sends a GET request to Google. computer talks to OpenWeather
+        data = response.json() # converts JSON into a Python dictionary
 
         if response.status_code != 200:
             print(f"\nError: {data.get('message', 'Unknown error')}")
             return
 
-        print("\n========================")
+        print("\n========================") #everything returned in JSON, python dictionary
         print(f"Weather for {data['name']}")
         print("========================")
         print(f"Temperature: {data['main']['temp']}°C")
