@@ -1,33 +1,80 @@
-# Weather Dashboard API Project by Saloni Dhawale
-A simple beginner-friendly project built to learn how APIs work using Python and Flask. This application fetches real-time weather data from the OpenWeather API and displays it to the user.
----
+# Weather API Project
+A beginner-friendly Python project that retrieves real-time weather information using the OpenWeather API.
+
+## Author
+Saloni Dhawale
 
 ## Features
 - Search weather by city name
-- Fetch real-time weather data from an external API
-- Display temperature and weather conditions
-- Basic backend built with Flask
-- Practice working with JSON data from APIs
+- Displays:
+  - Temperature
+  - Feels like temperature
+  - Weather conditions
+  - Humidity
+  - Wind speed
+- Handles invalid city names
+- Uses environment variables to protect API keys
 
----
-
-## Stack
+## Technologies Used
 - Python
-- Flask
-- Requests library
+- Requests
+- Python Dotenv
 - OpenWeather API
-- Git & GitHub
 
----
+## Installation
 
-## API Used
-This project uses the OpenWeather API:
-https://openweathermap.org/api
+Clone the repository:
 
----
-
-## Installation & Setup
-
-1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git clone https://github.com/YOUR_USERNAME/CheckWeatherAPI.git
+cd CheckWeatherAPI
+```
+
+Install dependencies:
+
+```bash
+pip3 install -r requirements.txt
+```
+
+Create a `.env` file:
+
+```txt
+API_KEY=YOUR_OPENWEATHER_API_KEY
+```
+
+Run the project:
+
+```bash
+python3 weather.py
+```
+
+## Example
+
+```txt
+Enter a city (or 'quit' to exit): Toronto
+
+========================
+Weather for Toronto
+========================
+Temperature: 22°C
+Feels Like: 21°C
+Condition: clear sky
+Humidity: 58%
+Wind Speed: 3.6 m/s
+```
+
+## What I Learned
+
+- Making HTTP requests in Python
+- Working with APIs
+- Parsing JSON responses
+- Error handling
+- Using environment variables
+- Managing a project with Git and GitHub
+
+## Future Improvements
+
+- 5-day forecast support
+- Save previous searches
+- Weather history
+- Graphical user interface (GUI)
