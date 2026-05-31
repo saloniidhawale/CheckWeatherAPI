@@ -64,11 +64,11 @@ Wind Speed: 3.6 m/s
 ```
 
 ## Learned Material
-  APIs
-    HTTP requests
-    Authentication
-    API keys
-    JSON responses
-  Software Development
-    Environment variables
-    Dependency management (requirements.txt)
+- APIs
+  - HTTP requests
+  - Authentication
+  - API keys
+  - JSON responses
+- Software Development
+  - Environment variables
+  - Dependency management (requirements.txt)
